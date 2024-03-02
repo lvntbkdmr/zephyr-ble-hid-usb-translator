@@ -806,7 +806,6 @@ void main(void)
 		printk("Failed to load settings.\n");
 	}
 
-
 	bt_conn_auth_cb_register(&auth_cb_display);
 	bt_conn_auth_info_cb_register(&auth_cb_info);
 
@@ -817,6 +816,7 @@ void main(void)
 
 	printk("Bluetooth initialized\n");
 
+/*
 #if IS_ENABLED(CONFIG_LED_INDICATOR)
 	if (!gpio_is_ready_dt(&led)) {
 		return 0;
@@ -874,9 +874,10 @@ void main(void)
 		if(settings_save()){
 			printk("Failed to save settings.\n");
 		};
-		// just a signal when the pair is resetted
+		// just a signal when the pair is reset
 		blink();
 	}
 #endif
+*/
 	start_scan();
 }
